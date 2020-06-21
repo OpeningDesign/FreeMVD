@@ -204,10 +204,13 @@ Test files here: [FreeMVD_WorkFlow/Specifications_Test_Files/Arcs](https://gitla
 | Program                          | Version<br/>native/plugin | Imported Native File  (PASS/FAIL) | Import Comments | Exported IFC File  (PASS/FAIL) | Export Comments |
 | -------------------------------- | ------------------------- | --------------------------------- | --------------- | ------------------------------ | --------------- |
 | ArchiCAD                         |                           |                                   |                 |                                |                 |
-| BlenderBIM                       |                           |                                   |                 |                                |                 |
+| BlenderBIM  | 2.82a/0.200621            | FAIL                              | creates a faceted mesh               | FAIL                           |                                                                                       |
 | FreeCAD                          |                           |                                   |                 |                                |                 |
 | Revit                            |                           | :heavy_check_mark:                |                 | :heavy_check_mark:             |                 |
-| Vectorworks                      |                           |                                   |                 |                                |                 |
-| <!--stackedit_data:              |                           |                                   |                 |                                |                 |
-| eyJoaXN0b3J5IjpbLTgxOTIwMzg0MF19 |                           |                                   |                 |                                |                 |
-| -->                              |                           |                                   |                 |                                |                 |
+| VectorWorks                        |                           |                                   |                 |                                |                 |
+
+
+
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTQxMzk0MjM1MiwxMDQ3Mzc0MTA4XX0=
+-->
