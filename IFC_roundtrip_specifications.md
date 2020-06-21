@@ -134,7 +134,7 @@ The application should be able to export and import an IFC file containing 2 cir
 | Program      | Native funtion/object                   |
 | ------------ | --------------------------------------- |
 | ArchiCAD     |                                         |
-| BlenderBIM   |                                         |
+| BlenderBIM   | Mesh                                    |
 | FreeCAD      |                                         |
 | Microstation |                                         |
 | Revit        | Model-in-Place Family - Solid Extrusion |
@@ -158,7 +158,7 @@ Test files here: [FreeMVD_WorkFlow/Specifications_Test_Files/Extrusions_Circles]
 | Program     | Version<br/>native/plugin | Imported Native File  (PASS/FAIL) | Import Comments                      | Exported IFC File  (PASS/FAIL) | Export Comments                                                                       |
 | ----------- | ------------------------- | --------------------------------- | ------------------------------------ | ------------------------------ | ------------------------------------------------------------------------------------- |
 | ArchiCAD    |                           |                                   |                                      |                                |                                                                                       |
-| BlenderBIM  |                           |                                   |                                      |                                |                                                                                       |
+| BlenderBIM  | 2.82a/0.200621            | FAIL                              | creates a faceted mesh               | FAIL                           |                                                                                       |
 | FreeCAD     |                           |                                   |                                      |                                |                                                                                       |
 | Revit       |                           | Partial                           | creates (2) arcs instead of a circle | :heavy_check_mark:             | if native file has (2) arcs as the profile, it still exports as  IFCCIRCLEPROFILEDEFs |
 | Vectorworks |                           |                                   |                                      |                                |                                                                                       |
