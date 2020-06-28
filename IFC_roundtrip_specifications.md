@@ -82,46 +82,7 @@ Test files here: [FreeMVD_WorkFlow/Specifications_Test_Files/Extrusions_Rectangl
 | Revit       | 2020/20.1.0.1             | :heavy_check_mark:                |                                                              | :x:                            | - Incorrect extrusion direction <br>- IFCARBITRARYCLOSEDPROFILEDEF was changed to IFCRECTANGLEPROFILEDEF |
 | Vectorworks |                           |                                   |                                                              |                                |                                                                                                          |
 
-## Mapped Items
-
-Mapped Items, which go by many different names in different BIM apps (a few called out below), are objects where the definition of one object is connected to another.  That is, if one istance is modified, these changes will also be reflected in other connected or linked instances.
-
-![](Specifications_Test_Files/Mapped_Items/imgs/Mapped_Items_Code.png)
-
-#### Native Funtionality
-
-| Program      | Native funtion/object |
-| ------------ | --------------------- |
-| ArchiCAD     | Objects, Modules      |
-| BlenderBIM   | Linked Objects        |
-| FreeCAD      | Clones                |
-| Microstation | Cells                 |
-| Revit        | Groups, Families      |
-| Vectorworks  | Symbols               |
-
-![](Specifications_Test_Files/Mapped_Items/imgs/Mapped_Items_Visual.gif)
-
-### Import criteria
-
-- That the connection or link between objects in still intact.  That is, if one instance is changed, the other instances will change as well.
-
-### Export criteria
-
-- The IFC file has the same shared mapping connected to the objects--circled in red below.
-
-![](Specifications_Test_Files/Mapped_Items/imgs/Mapped_Items_Code_circled.png)
-
-### Results
-
-Test files here: [Specifications_Test_Files/Mapped_Items/](https://gitlab.com/OpeningDesign/FreeMVD_WorkFlow/tree/master/Specifications_Test_Files/Mapped_Items)
-
-| Program     | Version<br/>native/plugin | Imported Native File (PASS/FAIL) | Import Comments                 | Exported IFC File  (PASS/FAIL) | Export Comments |
-| ----------- | ------------------------- | -------------------------------- | ------------------------------- | ------------------------------ | --------------- |
-| ArchiCAD    |                           |                                  |                                 |                                |                 |
-| BlenderBIM  | 2.82a/0.200511            | :heavy_check_mark:               |                                 | :heavy_check_mark:             |                 |
-| FreeCAD     |                           | :heavy_check_mark:               |                                 | :heavy_check_mark:             |                 |
-| Revit       | 2020/20.1.0.1             | :x:                              | link was broken between objects | :x:                            |                 |
-| Vectorworks |                           |                                  |                                 |                                |                 |
+---
 
 ## Extrusions_Circles
 
@@ -162,6 +123,7 @@ Test files here: [FreeMVD_WorkFlow/Specifications_Test_Files/Extrusions_Circles]
 | FreeCAD     |                           |                                   |                                      |                                |                                                                                       |
 | Revit       |                           | Partial                           | creates (2) arcs instead of a circle | :heavy_check_mark:             | if native file has (2) arcs as the profile, it still exports as  IFCCIRCLEPROFILEDEFs |
 | Vectorworks |                           |                                   |                                      |                                |                                                                                       |
+| ---         |                           |                                   |                                      |                                |                                                                                       |
 
 ## Extrusions_Arcs
 
@@ -201,16 +163,95 @@ The application should be able to export and import an IFC file containing 2 ext
 
 Test files here: [FreeMVD_WorkFlow/Specifications_Test_Files/Arcs](https://gitlab.com/OpeningDesign/FreeMVD_WorkFlow/tree/master/FreeMVD_WorkFlow/Specifications_Test_Files/Extrusions_Arcs)
 
-| Program                          | Version<br/>native/plugin | Imported Native File  (PASS/FAIL) | Import Comments | Exported IFC File  (PASS/FAIL) | Export Comments |
-| -------------------------------- | ------------------------- | --------------------------------- | --------------- | ------------------------------ | --------------- |
-| ArchiCAD                         |                           |                                   |                 |                                |                 |
-| BlenderBIM  | 2.82a/0.200621            | FAIL                              | creates a faceted mesh               | FAIL                           |                                                                                       |
-| FreeCAD                          |                           |                                   |                 |                                |                 |
-| Revit                            |                           | :heavy_check_mark:                |                 | :heavy_check_mark:             |                 |
-| VectorWorks                        |                           |                                   |                 |                                |                 |
+| Program     | Version<br/>native/plugin | Imported Native File  (PASS/FAIL) | Import Comments        | Exported IFC File  (PASS/FAIL) | Export Comments |
+| ----------- | ------------------------- | --------------------------------- | ---------------------- | ------------------------------ | --------------- |
+| ArchiCAD    |                           |                                   |                        |                                |                 |
+| BlenderBIM  | 2.82a/0.200621            | FAIL                              | creates a faceted mesh | FAIL                           |                 |
+| FreeCAD     |                           |                                   |                        |                                |                 |
+| Revit       |                           | :heavy_check_mark:                |                        | :heavy_check_mark:             |                 |
+| VectorWorks |                           |                                   |                        |                                |                 |
 
+---
 
+## Extrusions_Void
 
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQxMzk0MjM1MiwxMDQ3Mzc0MTA4XX0=
--->
+![](Specifications_Test_Files/Extrusions_Void/from_Revit/Extrusions_Void_01.png)
+
+#### Native Funtionality
+
+| Program      | Native funtion/object                   |
+| ------------ | --------------------------------------- |
+| ArchiCAD     |                                         |
+| BlenderBIM   |                                         |
+| FreeCAD      |                                         |
+| Microstation |                                         |
+| Revit        | Model-in-Place Family - Solid Extrusion |
+| Vectorworks  |                                         |
+
+### Import criteria
+
+* The extrusion directions and profile positions are correct
+* The extrusions can be changed after import
+* The base polylines can be edited after import
+
+### Export criteria
+
+- IFCEXTRUDEDAREASOLID
+  - IFCARBITRARYPROFILEDEFWITHVOIDS
+    - IFCPOLYLINE
+      - IFCPOLYLINE       
+
+### Results
+
+Test files here: [FreeMVD_WorkFlow/Specifications_Test_Files/Extrusions_Void/](https://gitlab.com/OpeningDesign/FreeMVD_WorkFlow/tree/master/FreeMVD_WorkFlow/Specifications_Test_Files/Extrusions_Void/)
+
+| Program     | Version<br/>native/plugin | Imported Native File  (PASS/FAIL) | Import Comments                          | Exported IFC File  (PASS/FAIL) | Export Comments |
+| ----------- | ------------------------- | --------------------------------- | ---------------------------------------- | ------------------------------ | --------------- |
+| ArchiCAD    |                           |                                   |                                          |                                |                 |
+| BlenderBIM  | 2.82a/0.200621            | FAIL                              | profile & extrusion length not available |                                |                 |
+| FreeCAD     |                           |                                   |                                          |                                |                 |
+| Revit       |                           | :heavy_check_mark:                |                                          | :heavy_check_mark:             |                 |
+| VectorWorks |                           |                                   |                                          |                                |                 |
+
+---
+
+## Mapped Items
+
+Mapped Items, which go by many different names in different BIM apps (a few called out below), are objects where the definition of one object is connected to another.  That is, if one istance is modified, these changes will also be reflected in other connected or linked instances.
+
+![](Specifications_Test_Files/Mapped_Items/imgs/Mapped_Items_Code.png)
+
+#### Native Funtionality
+
+| Program      | Native funtion/object |
+| ------------ | --------------------- |
+| ArchiCAD     | Objects, Modules      |
+| BlenderBIM   | Linked Objects        |
+| FreeCAD      | Clones                |
+| Microstation | Cells                 |
+| Revit        | Groups, Families      |
+| Vectorworks  | Symbols               |
+
+![](Specifications_Test_Files/Mapped_Items/imgs/Mapped_Items_Visual.gif)
+
+### Import criteria
+
+- That the connection or link between objects in still intact.  That is, if one instance is changed, the other instances will change as well.
+
+### Export criteria
+
+- The IFC file has the same shared mapping connected to the objects--circled in red below.
+
+![](Specifications_Test_Files/Mapped_Items/imgs/Mapped_Items_Code_circled.png)
+
+### Results
+
+Test files here: [Specifications_Test_Files/Mapped_Items/](https://gitlab.com/OpeningDesign/FreeMVD_WorkFlow/tree/master/Specifications_Test_Files/Mapped_Items)
+
+| Program     | Version<br/>native/plugin | Imported Native File (PASS/FAIL) | Import Comments                 | Exported IFC File  (PASS/FAIL) | Export Comments |
+| ----------- | ------------------------- | -------------------------------- | ------------------------------- | ------------------------------ | --------------- |
+| ArchiCAD    |                           |                                  |                                 |                                |                 |
+| BlenderBIM  | 2.82a/0.200511            | :heavy_check_mark:               |                                 | :heavy_check_mark:             |                 |
+| FreeCAD     |                           | :heavy_check_mark:               |                                 | :heavy_check_mark:             |                 |
+| Revit       | 2020/20.1.0.1             | :x:                              | link was broken between objects | :x:                            |                 |
+| Vectorworks |                           |                                  |                                 |                                |                 |
