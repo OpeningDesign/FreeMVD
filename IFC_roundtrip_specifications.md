@@ -123,7 +123,7 @@ Test files here: [FreeMVD_WorkFlow/Specifications_Test_Files/Extrusions_Circles]
 | FreeCAD     |                           |                                   |                                      |                                |                                                                                       |
 | Revit       |                           | Partial                           | creates (2) arcs instead of a circle | :heavy_check_mark:             | if native file has (2) arcs as the profile, it still exports as  IFCCIRCLEPROFILEDEFs |
 | Vectorworks |                           |                                   |                                      |                                |                                                                                       |
-| ---         |                           |                                   |                                      |                                |                                                                                       |
+
 
 ## Extrusions_Arcs
 
@@ -163,11 +163,16 @@ The application should be able to export and import an IFC file containing 2 ext
 
 Test files here: [FreeMVD_WorkFlow/Specifications_Test_Files/Arcs](https://gitlab.com/osarch/FreeMVD_WorkFlow/-/tree/master/Specifications_Test_Files/Extrusions_Arcs)
 
-| Program     | Version<br/>native/plugin | Imported Native File  (PASS/FAIL) | Import Comments        | Exported IFC File  (PASS/FAIL) | Export Comments |
-| ----------- | ------------------------- | --------------------------------- | ---------------------- | ---------------------- | --------------- |
-| ArchiCAD    |                                                                                  |                          |
-| BlenderBIM  | 2.82a/0.200621            | :x:              | creates a faceted mesh     |                               |                        |                                |                      |                           | :heavy_check_mark:                |               | :heavy_check_mark:             |                 |
-|  |                                                              |                        |                                |                 |
+
+| Program                          | Version<br/>native/plugin | Imported Native File  (PASS/FAIL) | Import Comments | Exported IFC File  (PASS/FAIL) | Export Comments |
+| -------------------------------- | ------------------------- | --------------------------------- | --------------- | ------------------------------ | --------------- |
+| ArchiCAD                         |                           |                                   |                 |                                |                 |
+| BlenderBIM  | 2.82a/0.200621            | FAIL                              | creates a faceted mesh               | FAIL                           |                                                                                       |
+| FreeCAD                          |                           |                                   |                 |                                |                 |
+| Revit                            |                           | :heavy_check_mark:                |                 | :heavy_check_mark:             |                 |
+| VectorWorks                        |                           |                                   |                 |                                |                 |
+
+
 ## Extrusions_Void
 
 ![](Specifications_Test_Files/Extrusions_Void/from_Revit/Extrusions_Void_01.png)
@@ -200,15 +205,20 @@ Test files here: [FreeMVD_WorkFlow/Specifications_Test_Files/Arcs](https://gitla
 
 Test files here: [FreeMVD_WorkFlow/Specifications_Test_Files/Extrusions_Void/](https://gitlab.com/osarch/FreeMVD_WorkFlow/-/tree/master/Specifications_Test_Files/Extrusions_Void)
 
-| Program                     | Version<br/>native/plugin | Imported Native File  (PASS/FAIL) | Import Comments                          | Exported IFC File  (PASS/FAIL) | Export Comments |
-| ----------- | ------------------------- | --------------------------------- | --------------------------------- | --------------- | ------------------------------ | --------------- |
-| ArchiCAD    |                           |        |                           |                                   |                  |                                |                 |
-| BlenderBIM  | 2.82a/0.200621            | :x:                              | profile & extrusion length not available |                                |                 |
-| FreeCAD     |                           |                                   |                                          |                                |                 |
-| Revit       |                           | :heavy_check_mark:                |                                          | :heavy_check_mark:             |                 |
-| VectorWorks |                           |                                   |                                          |                                |                 |
+
+| Program     | Version<br/>native/plugin | Imported Native File (PASS/FAIL) | Import Comments                 | Exported IFC File  (PASS/FAIL) | Export Comments |
+| ----------- | ------------------------- | -------------------------------- | ------------------------------- | ------------------------------ | --------------- |
+| ArchiCAD    |                           |                                  |                                 |                                |                 |
+| BlenderBIM  | 2.82a/0.200511            | :x:               |           Profile and Extrusion Direction not available                      |           |                 |
+| FreeCAD     |                           |               |                                 | :heavy_check_mark:             |                 |
+| Revit       | 2020/20.1.0.1             | :heavy_check_mark:                              |  | :heavy_check_mark:                             |                 |
+| Vectorworks |                           |                                  |                                 |                                |                 |
+
+
+
 
 ---
+
 
 ## Mapped Items
 
@@ -245,13 +255,13 @@ Test files here: [Specifications_Test_Files/Mapped_Items/](https://gitlab.com/OS
 
 | Program     | Version<br/>native/plugin | Imported Native File (PASS/FAIL) | Import Comments                 | Exported IFC File  (PASS/FAIL) | Export Comments |
 | ----------- | ------------------------- | -------------------------------- | ------------------------------- | ------------------------------ | --------------- |
-| Archicreates a faceted mesh               | FAIL                           |                                                                                       |
-| FreeCAD    |                           |       |                           |                                 |                                |                 |
-| BlenderBIM  | 2.82a/0.200511            | :heavy_check_mark:               |                                 | :heavy_check_mark:                                |                 |
-| Revit             |                 |
-| FreeCAD     |                           | :heavy_check_mark:               |                |                 | :heavy_check_mark:             |                 |
+| ArchiCAD    |                           |                                  |                                 |                                |                 |
+| BlenderBIM  | 2.82a/0.200511            | :heavy_check_mark:               |                                 | :heavy_check_mark:             |                 |
+| FreeCAD     |                           | :heavy_check_mark:               |                                 | :heavy_check_mark:             |                 |
 | Revit       | 2020/20.1.0.1             | :x:                              | link was broken between objects | :x:                            |                 |
-| Vectorworks          |                           |                                  |                                 |                                |                 |
+| Vectorworks |                           |                                  |                                 |                                |                 |
+
+
 
 
 
