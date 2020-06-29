@@ -173,9 +173,9 @@ Test files here: [FreeMVD_WorkFlow/Specifications_Test_Files/Arcs](https://gitla
 | VectorWorks                        |                           |                                   |                 |                                |                 |
 
 
-## Extrusions_Void
+## Extrusions_Void_InnerBoundary
 
-![](Specifications_Test_Files/Extrusions_Void/from_Revit/Extrusions_Void_01.png)
+![](Specifications_Test_Files/Extrusions_Void_InnerBoundary/from_Revit/Extrusions_Void_InnerBoundary_01.png)
 
 #### Native Funtionality
 
@@ -203,7 +203,7 @@ Test files here: [FreeMVD_WorkFlow/Specifications_Test_Files/Arcs](https://gitla
 
 ### Results
 
-Test files here: [FreeMVD_WorkFlow/Specifications_Test_Files/Extrusions_Void/](https://gitlab.com/osarch/FreeMVD_WorkFlow/-/tree/master/Specifications_Test_Files/Extrusions_Void)
+Test files here: [FreeMVD_WorkFlow/Specifications_Test_Files/Extrusions_Void_InnerBoundary/](https://gitlab.com/osarch/FreeMVD_WorkFlow/-/tree/master/Specifications_Test_Files/Extrusions_Void_InnerBoundary)
 
 
 | Program     | Version<br/>native/plugin | Imported Native File (PASS/FAIL) | Import Comments                 | Exported IFC File  (PASS/FAIL) | Export Comments |
@@ -266,6 +266,6 @@ Test files here: [Specifications_Test_Files/Mapped_Items/](https://gitlab.com/OS
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3ODM4OTgyNywtMTM0ODY0Mjg4OCwyMT
-QyMjQzODc4XX0=
+eyJoaXN0b3J5IjpbLTEyNjI0MzE0NTgsMTk3ODM4OTgyNywtMT
+M0ODY0Mjg4OCwyMTQyMjQzODc4XX0=
 -->
