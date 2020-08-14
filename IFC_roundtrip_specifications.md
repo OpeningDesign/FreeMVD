@@ -296,7 +296,7 @@ Test files here: [Model_Lines_Straight](https://gitlab.com/OSarch/FreeMVD_WorkFl
 | Program     | Version<br/>native/plugin | Imported Native File (PASS/FAIL) | Import Comments | Exported IFC File  (PASS/FAIL) | Export Comments |
 | ----------- | ------------------------- | -------------------------------- | --------------- | ------------------------------ | --------------- |
 | ArchiCAD    |                           |                                  |                 |                                |                 |
-| BlenderBIM  |                           |                                  |                 |                                |                 |
+| BlenderBIM  | 2.83.2/200731-win         | :x:                              |                 |                                |                 |
 | FreeCAD     |                           |                                  |                 |                                |                 |
 | Revit       | 2020/20.1.0.1             | :heavy_check_mark:               |                 | :heavy_check_mark:             |                 |
 | Vectorworks |                           |                                  |                 |                                |                 |
