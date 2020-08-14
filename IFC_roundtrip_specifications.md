@@ -119,11 +119,10 @@ Test files here: [FreeMVD_WorkFlow/Specifications_Test_Files/Extrusions_Circles]
 | Program     | Version<br/>native/plugin | Imported Native File  (PASS/FAIL) | Import Comments                      | Exported IFC File  (PASS/FAIL) | Export Comments                                                                       |
 | ----------- | ------------------------- | --------------------------------- | ------------------------------------ | ------------------------------ | ------------------------------------------------------------------------------------- |
 | ArchiCAD    |                           |                                   |                                      |                                |                                                                                       |
-| BlenderBIM  | 2.82a/0.200621            | :x:                              | creates a faceted mesh               | :x:                           |                                                                                       |
+| BlenderBIM  | 2.82a/0.200621            | :x:                               | creates a faceted mesh               | :x:                            |                                                                                       |
 | FreeCAD     |                           |                                   |                                      |                                |                                                                                       |
 | Revit       |                           | Partial                           | creates (2) arcs instead of a circle | :heavy_check_mark:             | if native file has (2) arcs as the profile, it still exports as  IFCCIRCLEPROFILEDEFs |
 | Vectorworks |                           |                                   |                                      |                                |                                                                                       |
-
 
 ## Extrusions_Arcs
 
@@ -163,15 +162,13 @@ The application should be able to export and import an IFC file containing 2 ext
 
 Test files here: [FreeMVD_WorkFlow/Specifications_Test_Files/Arcs](https://gitlab.com/osarch/FreeMVD_WorkFlow/-/tree/master/Specifications_Test_Files/Extrusions_Arcs)
 
-
-| Program                          | Version<br/>native/plugin | Imported Native File  (PASS/FAIL) | Import Comments | Exported IFC File  (PASS/FAIL) | Export Comments |
-| -------------------------------- | ------------------------- | --------------------------------- | --------------- | ------------------------------ | --------------- |
-| ArchiCAD                         |                           |                                   |                 |                                |                 |
-| BlenderBIM  | 2.82a/0.200621            | FAIL                              | creates a faceted mesh               | FAIL                           |                                                                                       |
-| FreeCAD                          |                           |                                   |                 |                                |                 |
-| Revit                            |                           | :heavy_check_mark:                |                 | :heavy_check_mark:             |                 |
-| VectorWorks                        |                           |                                   |                 |                                |                 |
-
+| Program     | Version<br/>native/plugin | Imported Native File  (PASS/FAIL) | Import Comments        | Exported IFC File  (PASS/FAIL) | Export Comments |
+| ----------- | ------------------------- | --------------------------------- | ---------------------- | ------------------------------ | --------------- |
+| ArchiCAD    |                           |                                   |                        |                                |                 |
+| BlenderBIM  | 2.82a/0.200621            | FAIL                              | creates a faceted mesh | FAIL                           |                 |
+| FreeCAD     |                           |                                   |                        |                                |                 |
+| Revit       |                           | :heavy_check_mark:                |                        | :heavy_check_mark:             |                 |
+| VectorWorks |                           |                                   |                        |                                |                 |
 
 ## Extrusions_Void_InnerBoundary
 
@@ -205,20 +202,15 @@ Test files here: [FreeMVD_WorkFlow/Specifications_Test_Files/Arcs](https://gitla
 
 Test files here: [FreeMVD_WorkFlow/Specifications_Test_Files/Extrusions_Void_InnerBoundary/](https://gitlab.com/osarch/FreeMVD_WorkFlow/-/tree/master/Specifications_Test_Files/Extrusions_Void_InnerBoundary)
 
-
-| Program     | Version<br/>native/plugin | Imported Native File (PASS/FAIL) | Import Comments                 | Exported IFC File  (PASS/FAIL) | Export Comments |
-| ----------- | ------------------------- | -------------------------------- | ------------------------------- | ------------------------------ | --------------- |
-| ArchiCAD    |                           |                                  |                                 |                                |                 |
-| BlenderBIM  | 2.82a/0.200511            | :x:               |           Profile and Extrusion Direction not available                      |           |                 |
-| FreeCAD     |                           |               |                                 | :heavy_check_mark:             |                 |
-| Revit       | 2020/20.1.0.1             | :heavy_check_mark:                              |  | :heavy_check_mark:                             |                 |
-| Vectorworks |                           |                                  |                                 |                                |                 |
-
-
-
+| Program     | Version<br/>native/plugin | Imported Native File (PASS/FAIL) | Import Comments                               | Exported IFC File  (PASS/FAIL) | Export Comments |
+| ----------- | ------------------------- | -------------------------------- | --------------------------------------------- | ------------------------------ | --------------- |
+| ArchiCAD    |                           |                                  |                                               |                                |                 |
+| BlenderBIM  | 2.82a/0.200511            | :x:                              | Profile and Extrusion Direction not available |                                |                 |
+| FreeCAD     |                           |                                  |                                               | :heavy_check_mark:             |                 |
+| Revit       | 2020/20.1.0.1             | :heavy_check_mark:               |                                               | :heavy_check_mark:             |                 |
+| Vectorworks |                           |                                  |                                               |                                |                 |
 
 ---
-
 
 ## Mapped Items
 
@@ -261,11 +253,96 @@ Test files here: [Specifications_Test_Files/Mapped_Items/](https://gitlab.com/OS
 | Revit       | 2020/20.1.0.1             | :x:                              | link was broken between objects | :x:                            |                 |
 | Vectorworks |                           |                                  |                                 |                                |                 |
 
+---
 
+## Model_Lines_Straight
 
+Straight lines in 3D space.
 
+#### Native Funtionality
 
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjI0MzE0NTgsMTk3ODM4OTgyNywtMT
-M0ODY0Mjg4OCwyMTQyMjQzODc4XX0=
+| Program      | Native funtion/object |
+| ------------ | --------------------- |
+| ArchiCAD     |                       |
+| BlenderBIM   |                       |
+| FreeCAD      |                       |
+| Microstation |                       |
+| Revit        | Model Lines           |
+| Vectorworks  |                       |
+
+### Import criteria
+
+![](Specifications_Test_Files/Model_Lines_Straight/from_Revit/Model_Lines_Straight_01.png)
+
+### Export criteria
+
+From Revit...
+
+    /*#160= IFCPRODUCTDEFINITIONSHAPE($,$,(#157));*/
+      /*#157= IFCSHAPEREPRESENTATION(#113,'Annotation','Annotation2D',(#147));*/
+        /*#113= IFCGEOMETRICREPRESENTATIONSUBCONTEXT($,'Annotation',*,*,*,*,#112,0.01,.PLAN_VIEW.,$);*/
+          /*#112= IFCGEOMETRICREPRESENTATIONCONTEXT($,'Annotation',3,0.0001,#101,#102);*/
+            /*#101= IFCAXIS2PLACEMENT3D(#6,$,$);*/
+              /*#6= IFCCARTESIANPOINT((0.,0.,0.));*/
+            /*#102= IFCDIRECTION((6.12303176911189E-17,1.));*/
+        /*#147= IFCGEOMETRICCURVESET((#145,#183,#199,#215,#231));*/
+          /*#145= IFCPOLYLINE((#9,#143));*/
+            /*#9= IFCCARTESIANPOINT((0.,0.));*/
+
+### Results
+
+Test files here: [Model_Lines_Straight](https://gitlab.com/OSarch/FreeMVD_WorkFlow/tree/master/Specifications_Test_Files/Model_Lines_Straight)
+
+| Program     | Version<br/>native/plugin | Imported Native File (PASS/FAIL) | Import Comments | Exported IFC File  (PASS/FAIL) | Export Comments |
+| ----------- | ------------------------- | -------------------------------- | --------------- | ------------------------------ | --------------- |
+| ArchiCAD    |                           |                                  |                 |                                |                 |
+| BlenderBIM  |                           |                                  |                 |                                |                 |
+| FreeCAD     |                           |                                  |                 |                                |                 |
+| Revit       | 2020/20.1.0.1             | :heavy_check_mark:               |                 | :heavy_check_mark:             |                 |
+| Vectorworks |                           |                                  |                 |                                |                 |
+
+<!--
+
+## Category
+
+Short Description
+
+![](Specifications_Test_Files/Mapped_Items/imgs/<to image>)
+
+#### Native Funtionality
+
+| Program      | Native funtion/object |
+| ------------ | --------------------- |
+| ArchiCAD     |                       |
+| BlenderBIM   |                       |
+| FreeCAD      |                       |
+| Microstation |                       |
+| Revit        |                       |
+| Vectorworks  |                       |
+
+### Import criteria
+
+- Description of what needs to be seen in the native app
+
+### Export criteria
+
+Something similar to this...
+
+- IFCEXTRUDEDAREASOLID
+  - IFCARBITRARYPROFILEDEFWITHVOIDS
+    - IFCPOLYLINE
+      - IFCPOLYLINE  
+
+### Results
+
+Test files here: [name of test](https://gitlab.com/OSarch/FreeMVD_WorkFlow/tree/master/Specifications_Test_Files/location of test files)
+
+| Program     | Version<br/>native/plugin | Imported Native File (PASS/FAIL) | Import Comments | Exported IFC File  (PASS/FAIL) | Export Comments |
+| ----------- | ------------------------- | -------------------------------- | --------------- | ------------------------------ | --------------- |
+| ArchiCAD    |                           |                                  |                 |                                |                 |
+| BlenderBIM  |                           |                                  |                 |                                |                 |
+| FreeCAD     |                           |                                  |                 |                                |                 |
+| Revit       |                           |                                  |                 |                                |                 |
+| Vectorworks |                           |                                  |                 |                                |                 |
+
 -->
