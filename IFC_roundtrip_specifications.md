@@ -164,9 +164,9 @@ Test files here: [FreeMVD_WorkFlow/Specifications_Test_Files/Arcs](https://gitla
 
 | Program     | Version<br/>native/plugin | Imported Native File  (PASS/FAIL) | Import Comments        | Exported IFC File  (PASS/FAIL) | Export Comments |
 | ----------- | ------------------------- | --------------------------------- | ---------------------- | ------------------------------ | --------------- |
-| ArchiCAD    |                           |                                   |                        |                                |                 |
-| BlenderBIM  | 2.82a/0.200621            | FAIL                              | creates a faceted mesh | FAIL                           |                 |
-| FreeCAD     |                           |                                   |                        |                                |                 |
+| ArchiCAD    |                                                   |                  |                            |                     |                 |
+| BlenderBIM  | 2.82a/0.200621            | FAIL                              | creates a faceted mesh | FAIL                     |
+| FreeCAD      |         |                           |                                   |                        |                                |                 |
 | Revit       |                           | :heavy_check_mark:                |                        | :heavy_check_mark:             |                 |
 | VectorWorks |                           |                                   |                        |                                |                 |
 
@@ -253,6 +253,7 @@ Test files here: [Specifications_Test_Files/Mapped_Items/](https://gitlab.com/OS
 | Revit       | 2020/20.1.0.1             | :x:                              | link was broken between objects | :x:                            |                 |
 | Vectorworks |                           |                                  |                                 |                                |                 |
 
+
 ---
 
 ## Model_Lines_Straight
@@ -305,20 +306,22 @@ Test files here: [Model_Lines_Straight](https://gitlab.com/OSarch/FreeMVD_WorkFl
 
 ## Category
 
-Short Description
+Short DescriptionCategory
 
-![](Specifications_Test_Files/Mapped_Items/imgs/<to image>)
+Mapped Items, which go by many different names in different BIM apps (a few called out below), are objects where the definition of one object is connected to another.  That is, if one istance is modified, these changes will also be reflected in other connected or linked instances.
+
+![](Specifications_Test_Files/Mapped_Items/imgs/<to image>Mapped_Items_Code.png)
 
 #### Native Funtionality
 
 | Program      | Native funtion/object |
 | ------------ | --------------------- |
-| ArchiCAD     |                       |
-| BlenderBIM   |                       |
-| FreeCAD      |                       |
-| Microstation |                       |
-| Revit        |                       |
-| Vectorworks  |                       |
+| ArchiCAD     |               Objects, Modules        |
+| BlenderBIM   |               Linked Objects        |
+| FreeCAD      |       Clones                |
+| Microstation |  Cells                     |
+| Revit        |                Groups, Families       |
+| Vectorworks  |        Symbols               |
 
 ### Import criteria
 
@@ -335,14 +338,35 @@ Something similar to this...
 
 ### Results
 
-Test files here: [name of test](https://gitlab.com/OSarch/FreeMVD_WorkFlow/tree/master/Specifications_Test_Files/location of test files)
+Test files here: [name of test![](Specifications_Test_Files/Mapped_Items/imgs/Mapped_Items_Visual.gif)
 
-| Program     | Version<br/>native/plugin | Imported Native File (PASS/FAIL) | Import Comments | Exported IFC File  (PASS/FAIL) | Export Comments |
-| ----------- | ------------------------- | -------------------------------- | --------------- | ------------------------------ | --------------- |
-| ArchiCAD    |                           |                                  |                 |                                |                 |
-| BlenderBIM  |                           |                                  |                 |                                |                 |
-| FreeCAD     |                           |                                  |                 |                                |                 |
-| Revit       |                           |                                  |                 |                                |                 |
-| Vectorworks |                           |                                  |                 |                                |                 |
+### Import criteria
 
+- That the connection or link between objects in still intact.  That is, if one instance is changed, the other instances will change as well.
+
+### Export criteria
+
+- The IFC file has the same shared mapping connected to the objects--circled in red below.
+
+![](Specifications_Test_Files/Mapped_Items/imgs/Mapped_Items_Code_circled.png)
+
+### Results
+
+Test files here: [Specifications_Test_Files/Mapped_Items/](https://gitlab.com/OSarch/FreeMVD_WorkFlow/tree/master/Specifications_Test_Files/location of test fileMapped_Items)
+
+| Program     | Version<br/>native/plugin | Imported Native File (PASS/FAIL) | Import Comments                 | Exported IFC File  (PASS/FAIL) | Export Comments |
+| ----------- | ------------------------- | -------------------------------- | ------------------------------- | ------------------------------ | --------------- |
+| ArchiCAD    |                           |                                  |                                 |                                |                 |
+| BlenderBIM  |                           |                                  |  2.82a/0.200511            | :heavy_check_mark:               |                                 | :heavy_check_mark:             |                 |
+| FreeCAD     |                           |                   :heavy_check_mark:               |                 |                   | :heavy_check_mark:             |                 |
+| Revit       |         2020/20.1.0.1                  |    | :x:                              |                 |    link was broken between objects | :x:                            |                 |
+| Vectorworks |                           |                                  |                                 |                                |                 |
+
+-->
+
+
+
+
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTc5MzIxNjMwM119
 -->
