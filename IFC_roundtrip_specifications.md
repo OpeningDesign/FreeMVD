@@ -116,13 +116,13 @@ The application should be able to export and import an IFC file containing 2 cir
 
 Test files here: [FreeMVD_WorkFlow/Specifications_Test_Files/Extrusions_Circles](https://gitlab.com/OSarch/FreeMVD_WorkFlow/tree/master/FreeMVD_WorkFlow/Specifications_Test_Files/Extrusions_Circles)
 
-| Program     | Version<br/>native/plugin | Imported Native File  (PASS/FAIL) | Import Comments                      | Exported IFC File  (PASS/FAIL) | Export Comments                                                                       |
-| ----------- | ------------------------- | --------------------------------- | ------------------------------------ | ------------------------------ | ------------------------------------------------------------------------------------- |
-| ArchiCAD    |                           |                                   |                                      |                                |                                                                                       |
-| BlenderBIM  | 2.82a/0.200621            | :x:                               | creates a faceted mesh               | :x:                            |                                                                                       |
-| FreeCAD     |                           |                                   |                                      |                                |                                                                                       |
-| Revit       |                           | Partial                           | creates (2) arcs instead of a circle | :heavy_check_mark:             | if native file has (2) arcs as the profile, it still exports as  IFCCIRCLEPROFILEDEFs |
-| Vectorworks |                           |                                   |                                      |                                |                                                                                       |
+| Program     | Version<br/>native/plugin | Imported Native File  (PASS/FAIL) | Import Comments                                                                                                       | Exported IFC File  (PASS/FAIL) | Export Comments                                                                       |
+| ----------- | ------------------------- | --------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ------------------------------ | ------------------------------------------------------------------------------------- |
+| ArchiCAD    |                           |                                   |                                                                                                                       |                                |                                                                                       |
+| BlenderBIM  | 2.82a/200829-win          | Partial                           | the radius value is not accessible.  Possible room for UI improvement in the future, in using modifiers, curves, etc. | :heavy_check_mark:             |                                                                                       |
+| FreeCAD     |                           |                                   |                                                                                                                       |                                |                                                                                       |
+| Revit       |                           | Partial                           | creates (2) arcs instead of a circle                                                                                  | :heavy_check_mark:             | if native file has (2) arcs as the profile, it still exports as  IFCCIRCLEPROFILEDEFs |
+| Vectorworks |                           |                                   |                                                                                                                       |                                |                                                                                       |
 
 ## Extrusions_Arcs
 
@@ -164,9 +164,9 @@ Test files here: [FreeMVD_WorkFlow/Specifications_Test_Files/Arcs](https://gitla
 
 | Program     | Version<br/>native/plugin | Imported Native File  (PASS/FAIL) | Import Comments        | Exported IFC File  (PASS/FAIL) | Export Comments |
 | ----------- | ------------------------- | --------------------------------- | ---------------------- | ------------------------------ | --------------- |
-| ArchiCAD    |                                                   |                  |                            |                     |                 |
-| BlenderBIM  | 2.82a/0.200621            | FAIL                              | creates a faceted mesh | FAIL                     |
-| FreeCAD      |         |                           |                                   |                        |                                |                 |
+| ArchiCAD    |                           |                                   |                        |                                |                 |
+| BlenderBIM  | 2.82a/0.200621            | FAIL                              | creates a faceted mesh | FAIL                           |                 |
+| FreeCAD     |                           |                                   |                        |                                |                 |
 | Revit       |                           | :heavy_check_mark:                |                        | :heavy_check_mark:             |                 |
 | VectorWorks |                           |                                   |                        |                                |                 |
 
@@ -252,7 +252,6 @@ Test files here: [Specifications_Test_Files/Mapped_Items/](https://gitlab.com/OS
 | FreeCAD     |                           | :heavy_check_mark:               |                                 | :heavy_check_mark:             |                 |
 | Revit       | 2020/20.1.0.1             | :x:                              | link was broken between objects | :x:                            |                 |
 | Vectorworks |                           |                                  |                                 |                                |                 |
-
 
 ---
 
@@ -363,9 +362,6 @@ Test files here: [Specifications_Test_Files/Mapped_Items/](https://gitlab.com/OS
 | Vectorworks |                           |                                  |                                 |                                |                 |
 
 -->
-
-
-
 
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbLTc5MzIxNjMwM119
