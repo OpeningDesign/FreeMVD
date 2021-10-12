@@ -1,7 +1,7 @@
 ISO-10303-21;
 HEADER;
 FILE_DESCRIPTION(('ViewDefinition[DesignTransferView]'),'2;1');
-FILE_NAME('Beam_W_section_02.ifc','2021-09-25T16:21:14-05:00',(),(),'IfcOpenShell 0.6.0b0','BlenderBIM 0.0.210913','Nobody');
+FILE_NAME('Beam_W_section_02.ifc','2021-09-25T17:17:18-05:00',(),(),'IfcOpenShell 0.6.0b0','BlenderBIM 0.0.210913','Nobody');
 FILE_SCHEMA(('IFC4'));
 ENDSEC;
 DATA;
