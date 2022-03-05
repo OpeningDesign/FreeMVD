@@ -1,6 +1,6 @@
-*.*.rvt
-*.*.rte
-*.*.rfa
+*.[0-9]*.rvt
+*.[0-9]*.rte
+*.[0-9]*.rfa
 *.ifc.log
 *.bak
 *.ifc.log.html
