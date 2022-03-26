@@ -1,0 +1,26 @@
+#92=IFCMAPPEDITEM(#64,#91);
+	#64=IFCREPRESENTATIONMAP(#26,#63);
+	#91=IFCCARTESIANTRANSFORMATIONOPERATOR3D(#87,#88,#89,1.,#90);
+
+
+#100=IFCMAPPEDGROUP(#757,#200);
+  #757= IFCRELASSIGNSTOGROUP('3U4DXTfAb8ZQjJfOCKAq8f',#42,$,$,(#353,#531,#743),$,#386);
+  	#42= IFCOWNERHISTORY(#39,#5,$,.NOCHANGE.,$,$,$,1647194224)
+  	#353= IFCBUILDINGELEMENTPROXY('3U4DXTfAb8ZQjJfO8KAq8c',#42,'Testy IPF2:Testy IPF:151607',$,'Testy IPF2:Testy IPF',#352,#348,'151607',$);
+  	#531= IFCBUILDINGELEMENTPROXY('0IkNBoiuv6cv2hmNRlJngI',#42,'Testy IPF5:Testy IPF:151970',$,'Testy IPF5:Testy IPF',#530,#526,'151970',$);
+  	#743= IFCGROUP('1i2JPxuADBNwjk60e26cQi',#42,'Model Group:Group_within:152171',$,'Model Group:Group_within');
+  		#771= IFCRELASSIGNSTOGROUP('1i2JPxuADBNwjk60i26cQi',#42,$,$,(#710),$,#743);
+  			#42= IFCOWNERHISTORY(#39,#5,$,.NOCHANGE.,$,$,$,1647194224);
+  			#710= IFCBUILDINGELEMENTPROXY('1i2JPxuADBNwjk60e26cQj',#42,'Testy IPF8:Testy IPF:152170',$,'Testy IPF8:Testy IPF',#709,#705,'152170',$);
+  			#743= IFCGROUP('1i2JPxuADBNwjk60e26cQi',#42,'Model Group:Group_within:152171',$,'Model Group:Group_within');
+  	#386= IFCGROUP('3U4DXTfAb8ZQjJfO8KAq8f',#42,'Model Group:Testy Group:151608',$,'Model Group:Testy Group');
+  #91=IFCCARTESIANTRANSFORMATIONOPERATOR3D(#87,#88,#89,1.,#90);
+
+
+
+
+	ENTITY IfcMappedGroup
+	SUBTYPE OF (IfcObject);
+	MappingSource : IfcRelAssignsToGroup;
+	MappingTarget : IfcCartesianTransformationOperator;
+	END_ENTITY;
