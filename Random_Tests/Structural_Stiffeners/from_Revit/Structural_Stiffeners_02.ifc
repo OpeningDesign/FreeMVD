@@ -4,23 +4,23 @@ HEADER;
 /******************************************************************************************
 * STEP Physical File produced by: The EXPRESS Data Manager Version 5.02.0100.07 : 28 Aug 2013
 * Module:                         EDMstepFileFactory/EDMstandAlone
-* Creation date:                  Wed Apr 06 12:15:43 2022
+* Creation date:                  Sat May 28 11:39:15 2022
 * Host:                           DESKTOP-CJF9H2M
-* Database:                       C:\Users\Owner\AppData\Local\Temp\5d698e4e-ebcc-4c86-9fc9-64701f1caf14\e9ef1c2f-d319-45f2-90e3-4c9ceccd8f0c\ifc
+* Database:                       C:\Users\Owner\AppData\Local\Temp\52d5aa5e-6ace-44e6-befe-8d65641ac91e\bf791e42-5641-4f3a-9723-40c40699c071\ifc
 * Database version:               5507
-* Database creation date:         Wed Apr 06 12:15:39 2022
+* Database creation date:         Sat May 28 11:39:11 2022
 * Schema:                         IFC2X3
 * Model:                          DataRepository.ifc
-* Model creation date:            Wed Apr 06 12:15:39 2022
+* Model creation date:            Sat May 28 11:39:11 2022
 * Header model:                   DataRepository.ifc_HeaderModel
-* Header model creation date:     Wed Apr 06 12:15:39 2022
+* Header model creation date:     Sat May 28 11:39:11 2022
 * EDMuser:                        sdai-user
 * EDMgroup:                       sdai-group
 * License ID and type:            5605 : Permanent license. Expiry date: 
 * EDMstepFileFactory options:     020000
 ******************************************************************************************/
 FILE_DESCRIPTION(('ViewDefinition [CoordinationView_V2.0]'),'2;1');
-FILE_NAME('Project Number','2022-04-06T12:15:43',(''),(''),'The EXPRESS Data Manager Version 5.02.0100.07 : 28 Aug 2013','20200210_1400(x64) - Exporter 20.3.3.0 - Alternate UI 20.3.3.0','');
+FILE_NAME('Project Number','2022-05-28T11:39:15',(''),(''),'The EXPRESS Data Manager Version 5.02.0100.07 : 28 Aug 2013','20200210_1400(x64) - Exporter 20.3.3.0 - Alternate UI 20.3.3.0','');
 FILE_SCHEMA(('IFC2X3'));
 ENDSEC;
 
@@ -44,7 +44,7 @@ DATA;
 #36= IFCPERSON($,'','ryan@openingdesign.com',$,$,$,$,$);
 #38= IFCORGANIZATION($,'','',$,$);
 #39= IFCPERSONANDORGANIZATION(#36,#38,$);
-#42= IFCOWNERHISTORY(#39,#5,$,.NOCHANGE.,$,$,$,1649265299);
+#42= IFCOWNERHISTORY(#39,#5,$,.NOCHANGE.,$,$,$,1653755401);
 #43= IFCSIUNIT(*,.LENGTHUNIT.,$,.METRE.);
 #44= IFCDIMENSIONALEXPONENTS(1,0,0,0,0,0,0);
 #45= IFCMEASUREWITHUNIT(IFCRATIOMEASURE(0.3048),#43);
@@ -126,100 +126,92 @@ DATA;
 #151= IFCLOCALPLACEMENT($,#150);
 #152= IFCSITE('2_dlBmlfj7ePR9p7RrIoiV',#42,'Default',$,$,#151,$,$,.ELEMENT.,(42,21,30,344238),(-71,-3,-35,-194702),0.,$,$);
 #156= IFCPROPERTYSINGLEVALUE('Category',$,IFCLABEL('Project Information'),$);
-#160= IFCPROPERTYSET('32uDFmkVvB6OYBc68FumSb',#42,'Pset_ProductRequirements',$,(#156));
-#165= IFCRELDEFINESBYPROPERTIES('0uijtlhzb8HQ_eLwjdU7eS',#42,$,$,(#152),#160);
+#160= IFCPROPERTYSET('0MLSSp7SLCWREqdTWcvk2F',#42,'Pset_ProductRequirements',$,(#156));
+#165= IFCRELDEFINESBYPROPERTIES('2uHJw15gvFsA95QVx1WDT_',#42,$,$,(#152),#160);
 #174= IFCAXIS2PLACEMENT3D(#6,$,$);
-#388= IFCRELDEFINESBYTYPE('2hlCZViF10MOJc1gbOfvdF',#42,$,$,(#223,#277,#307),#203);
-#176= IFCCARTESIANPOINT((0.,-7.77156117237610E-16));
+#376= IFCRELDEFINESBYTYPE('30Qn_3uU1BPxUNDMsJYLRH',#42,$,$,(#215,#267,#297),#195);
+#176= IFCCARTESIANPOINT((8.32667268468867E-17,0.));
 #178= IFCAXIS2PLACEMENT2D(#176,#24);
-#179= IFCCIRCLEPROFILEDEF(.AREA.,'Structural Stiffeners Family',#178,0.5);
-#180= IFCCARTESIANPOINT((2.,0.499999999999912,0.));
-#182= IFCAXIS2PLACEMENT3D(#180,$,$);
+#179= IFCRECTANGLEPROFILEDEF(.AREA.,'Structural Stiffeners Family',#178,1.,1.);
+#180= IFCCARTESIANPOINT((0.500000000000061,0.499999999999917,0.));
+#182= IFCAXIS2PLACEMENT3D(#180,#20,#16);
 #183= IFCEXTRUDEDAREASOLID(#179,#182,#20,1.);
-#184= IFCCARTESIANPOINT((8.32667268468867E-17,0.));
-#186= IFCAXIS2PLACEMENT2D(#184,#24);
-#187= IFCRECTANGLEPROFILEDEF(.AREA.,'Structural Stiffeners Family',#186,1.,1.);
-#188= IFCCARTESIANPOINT((0.500000000000061,0.499999999999917,0.));
-#190= IFCAXIS2PLACEMENT3D(#188,#20,#16);
-#191= IFCEXTRUDEDAREASOLID(#187,#190,#20,1.);
-#192= IFCSHAPEREPRESENTATION(#125,'Body','SweptSolid',(#183,#191));
-#199= IFCAXIS2PLACEMENT3D(#6,$,$);
-#200= IFCREPRESENTATIONMAP(#199,#192);
-#203= IFCPLATETYPE('1oHE7S_K14efhlXcfQSEC_',#42,'Structural Stiffeners Family:Structural Stiffeners Family',$,$,(#259,#262),(#200),'153980',$,.NOTDEFINED.);
-#206= IFCMATERIAL('<Unnamed>');
-#209= IFCCLASSIFICATION('https://www.csiresources.org/standards/uniformat','1998',$,'Uniformat');
-#211= IFCCARTESIANTRANSFORMATIONOPERATOR3D($,$,#6,1.,$);
-#212= IFCMAPPEDITEM(#200,#211);
-#214= IFCSHAPEREPRESENTATION(#125,'Body','MappedRepresentation',(#212));
-#216= IFCPRODUCTDEFINITIONSHAPE($,$,(#214));
-#221= IFCAXIS2PLACEMENT3D(#6,$,$);
-#222= IFCLOCALPLACEMENT(#146,#221);
-#223= IFCPLATE('1oHE7S_K14efhlXcfQSECk',#42,'Structural Stiffeners Family:Structural Stiffeners Family:153980',$,'Structural Stiffeners Family:Structural Stiffeners Family',#222,#216,'153980');
-#238= IFCMATERIALLIST((#206,#206));
-#240= IFCPROPERTYSINGLEVALUE('Reference',$,IFCIDENTIFIER('Structural Stiffeners Family'),$);
-#241= IFCPROPERTYSINGLEVALUE('IsExternal',$,IFCBOOLEAN(.F.),$);
-#242= IFCPROPERTYSET('1oHE7S_K14efhlZPrQSECk',#42,'Pset_PlateCommon',$,(#240,#241));
-#244= IFCPROPERTYSINGLEVALUE('Category',$,IFCLABEL('Structural Stiffeners'),$);
-#245= IFCPROPERTYSET('1fx$6NPQHFaeoeV6PAdZ6A',#42,'Pset_ProductRequirements',$,(#244));
-#247= IFCPROPERTYSET('0s$5JWp9L2zxog2G7YQMqd',#42,'Pset_QuantityTakeOff',$,(#240));
-#249= IFCRELDEFINESBYPROPERTIES('1Y7TtcClXCveMg3AfdkAsb',#42,$,$,(#223),#242);
-#253= IFCRELDEFINESBYPROPERTIES('0OCtpu$yf58vXqmu5VN1tG',#42,$,$,(#223),#245);
-#256= IFCRELDEFINESBYPROPERTIES('02vjqYReP7ERu_PyzldDs2',#42,$,$,(#223),#247);
-#259= IFCPROPERTYSET('1oHE7S_K14efhlZPrQSEC_',#42,'Pset_PlateCommon',$,(#241));
-#261= IFCPROPERTYSINGLEVALUE('Category',$,IFCLABEL('Structural Stiffeners'),$);
-#262= IFCPROPERTYSET('3n2SCYJ9n6UOdxt94TV5OQ',#42,'Pset_ProductRequirements',$,(#261));
-#267= IFCMAPPEDITEM(#200,#211);
-#268= IFCSHAPEREPRESENTATION(#125,'Body','MappedRepresentation',(#267));
-#270= IFCPRODUCTDEFINITIONSHAPE($,$,(#268));
-#273= IFCCARTESIANPOINT((0.,2.,0.));
-#275= IFCAXIS2PLACEMENT3D(#273,$,$);
-#276= IFCLOCALPLACEMENT(#146,#275);
-#277= IFCPLATE('1oHE7S_K14efhlXcfQSE15',#42,'Structural Stiffeners Family:Structural Stiffeners Family:154135',$,'Structural Stiffeners Family:Structural Stiffeners Family',#276,#270,'154135');
-#280= IFCPROPERTYSET('1oHE7S_K14efhlZPrQSE15',#42,'Pset_PlateCommon',$,(#240,#241));
-#282= IFCPROPERTYSINGLEVALUE('Category',$,IFCLABEL('Structural Stiffeners'),$);
-#283= IFCPROPERTYSET('3eWjb2OWf13OHjgVkOGUzH',#42,'Pset_ProductRequirements',$,(#282));
-#285= IFCPROPERTYSET('3O4pI6VSTEqu_oo0YTKr4Z',#42,'Pset_QuantityTakeOff',$,(#240));
-#287= IFCRELDEFINESBYPROPERTIES('1B4TS$RcvCXQ5LNxC$$Biw',#42,$,$,(#277),#280);
-#291= IFCRELDEFINESBYPROPERTIES('13g9$nM6r77wFFHKMRf7Uk',#42,$,$,(#277),#283);
-#294= IFCRELDEFINESBYPROPERTIES('3hiXSadnjA_8zjPslTF2iR',#42,$,$,(#277),#285);
-#297= IFCMAPPEDITEM(#200,#211);
-#298= IFCSHAPEREPRESENTATION(#125,'Body','MappedRepresentation',(#297));
-#300= IFCPRODUCTDEFINITIONSHAPE($,$,(#298));
-#303= IFCCARTESIANPOINT((0.,4.,0.));
-#305= IFCAXIS2PLACEMENT3D(#303,$,$);
-#306= IFCLOCALPLACEMENT(#146,#305);
-#307= IFCPLATE('1oHE7S_K14efhlXcfQSE1b',#42,'Structural Stiffeners Family:Structural Stiffeners Family:154167',$,'Structural Stiffeners Family:Structural Stiffeners Family',#306,#300,'154167');
-#310= IFCPROPERTYSET('1oHE7S_K14efhlZPrQSE1b',#42,'Pset_PlateCommon',$,(#240,#241));
-#312= IFCPROPERTYSINGLEVALUE('Category',$,IFCLABEL('Structural Stiffeners'),$);
-#313= IFCPROPERTYSET('2o$9fuh0DF78qf$SqciySq',#42,'Pset_ProductRequirements',$,(#312));
-#315= IFCPROPERTYSET('1iVz1h99f3v9hCrWZzY2hY',#42,'Pset_QuantityTakeOff',$,(#240));
-#317= IFCRELDEFINESBYPROPERTIES('1cgqdYhs9FlhRtu5kMiKnK',#42,$,$,(#307),#310);
-#321= IFCRELDEFINESBYPROPERTIES('20EXN4nHLB1AJ0h8z0Q93_',#42,$,$,(#307),#313);
-#324= IFCRELDEFINESBYPROPERTIES('1ucgjEYwT7bu4gdR7vSceu',#42,$,$,(#307),#315);
-#328= IFCPROPERTYSINGLEVALUE('Name',$,IFCLABEL('Level 1'),$);
-#329= IFCPROPERTYSET('2Erupu_0rAXxH8kFY38x5X',#42,'Pset_AirSideSystemInformation',$,(#328));
-#331= IFCPROPERTYSINGLEVALUE('AboveGround',$,IFCLOGICAL(.U.),$);
-#332= IFCPROPERTYSET('2MayaW1Gv4GviuBtqfLNUo',#42,'Pset_BuildingStoreyCommon',$,(#331));
-#334= IFCPROPERTYSINGLEVALUE('Name',$,IFCLABEL('Level 1'),$);
-#335= IFCPROPERTYSINGLEVALUE('Category',$,IFCLABEL('Levels'),$);
-#336= IFCPROPERTYSET('2Y6tACWjP10eq6EJjxUDbC',#42,'Pset_ProductRequirements',$,(#334,#335));
-#338= IFCRELDEFINESBYPROPERTIES('082FxFj5j63OCdbhKcQKVU',#42,$,$,(#148),#329);
-#342= IFCRELDEFINESBYPROPERTIES('2OeAkOozvEnhmsWjAtubOQ',#42,$,$,(#148),#332);
-#345= IFCRELDEFINESBYPROPERTIES('2vAEcSMj9CRBPNOfVi8jjk',#42,$,$,(#148),#336);
-#348= IFCRELCONTAINEDINSPATIALSTRUCTURE('2MayaW1Gv4Gviu990fLNUo',#42,$,$,(#223,#277,#307),#148);
-#354= IFCRELAGGREGATES('1N4xoXj6nAGA7XvfABpey_',#42,$,$,#128,(#152));
-#358= IFCRELAGGREGATES('2Ww7jOlez7BhdOQmphBPKT',#42,$,$,#152,(#139));
-#362= IFCRELAGGREGATES('1b7tIashzEUx2OKPg24_7R',#42,$,$,#139,(#148));
-#366= IFCPROPERTYSINGLEVALUE('NumberOfStoreys',$,IFCINTEGER(1),$);
-#367= IFCPROPERTYSINGLEVALUE('IsLandmarked',$,IFCLOGICAL(.U.),$);
-#368= IFCPROPERTYSET('1b7tIashzEUx2OMdA24_7R',#42,'Pset_BuildingCommon',$,(#366,#367));
-#370= IFCPROPERTYSINGLEVALUE('Category',$,IFCLABEL('Project Information'),$);
-#371= IFCPROPERTYSET('17IgXFZ1nDyg8uAww99w8T',#42,'Pset_ProductRequirements',$,(#370));
-#373= IFCRELDEFINESBYPROPERTIES('3I4MHbj8v1jA$wAIXHxQIH',#42,$,$,(#139),#368);
-#377= IFCRELDEFINESBYPROPERTIES('11Rk29V513e9i3FtymtPA9',#42,$,$,(#139),#371);
-#380= IFCRELASSOCIATESMATERIAL('3HxkxndPLF$BS80mDq_KKo',#42,$,$,(#203,#277,#307),#206);
-#385= IFCRELASSOCIATESMATERIAL('1F0cFn45TEnxHYoADGNbdY',#42,$,$,(#223),#238);
-#391= IFCPRESENTATIONLAYERASSIGNMENT('S-BEAM',$,(#192,#214,#268,#298),$);
+#184= IFCSHAPEREPRESENTATION(#125,'Body','SweptSolid',(#183));
+#191= IFCAXIS2PLACEMENT3D(#6,$,$);
+#192= IFCREPRESENTATIONMAP(#191,#184);
+#195= IFCPLATETYPE('1oHE7S_K14efhlXcfQSEC_',#42,'Structural Stiffeners Family:Structural Stiffeners Family',$,$,(#249,#252),(#192),'153980',$,.NOTDEFINED.);
+#198= IFCMATERIAL('<Unnamed>');
+#201= IFCCLASSIFICATION('https://www.csiresources.org/standards/uniformat','1998',$,'Uniformat');
+#203= IFCCARTESIANTRANSFORMATIONOPERATOR3D($,$,#6,1.,$);
+#204= IFCMAPPEDITEM(#192,#203);
+#206= IFCSHAPEREPRESENTATION(#125,'Body','MappedRepresentation',(#204));
+#208= IFCPRODUCTDEFINITIONSHAPE($,$,(#206));
+#213= IFCAXIS2PLACEMENT3D(#6,$,$);
+#214= IFCLOCALPLACEMENT(#146,#213);
+#215= IFCPLATE('1oHE7S_K14efhlXcfQSECk',#42,'Structural Stiffeners Family:Structural Stiffeners Family:153980',$,'Structural Stiffeners Family:Structural Stiffeners Family',#214,#208,'153980');
+#230= IFCPROPERTYSINGLEVALUE('Reference',$,IFCIDENTIFIER('Structural Stiffeners Family'),$);
+#231= IFCPROPERTYSINGLEVALUE('IsExternal',$,IFCBOOLEAN(.F.),$);
+#232= IFCPROPERTYSET('1oHE7S_K14efhlZPrQSECk',#42,'Pset_PlateCommon',$,(#230,#231));
+#234= IFCPROPERTYSINGLEVALUE('Category',$,IFCLABEL('Structural Stiffeners'),$);
+#235= IFCPROPERTYSET('1Vy_FrBC921fR9GVKYg30Z',#42,'Pset_ProductRequirements',$,(#234));
+#237= IFCPROPERTYSET('00M_M$EsX8gRNdWESFx0uN',#42,'Pset_QuantityTakeOff',$,(#230));
+#239= IFCRELDEFINESBYPROPERTIES('1kDPMclUr25wtFuC$CpxMa',#42,$,$,(#215),#232);
+#243= IFCRELDEFINESBYPROPERTIES('1lccdbo7jBYwfg9YtWVneb',#42,$,$,(#215),#235);
+#246= IFCRELDEFINESBYPROPERTIES('2s7evsfeXEmugd$qspvhjZ',#42,$,$,(#215),#237);
+#249= IFCPROPERTYSET('1oHE7S_K14efhlZPrQSEC_',#42,'Pset_PlateCommon',$,(#231));
+#251= IFCPROPERTYSINGLEVALUE('Category',$,IFCLABEL('Structural Stiffeners'),$);
+#252= IFCPROPERTYSET('1EBySQmeHEEOEtoqWHufkJ',#42,'Pset_ProductRequirements',$,(#251));
+#257= IFCMAPPEDITEM(#192,#203);
+#258= IFCSHAPEREPRESENTATION(#125,'Body','MappedRepresentation',(#257));
+#260= IFCPRODUCTDEFINITIONSHAPE($,$,(#258));
+#263= IFCCARTESIANPOINT((0.,2.,0.));
+#265= IFCAXIS2PLACEMENT3D(#263,$,$);
+#266= IFCLOCALPLACEMENT(#146,#265);
+#267= IFCPLATE('1oHE7S_K14efhlXcfQSE15',#42,'Structural Stiffeners Family:Structural Stiffeners Family:154135',$,'Structural Stiffeners Family:Structural Stiffeners Family',#266,#260,'154135');
+#270= IFCPROPERTYSET('1oHE7S_K14efhlZPrQSE15',#42,'Pset_PlateCommon',$,(#230,#231));
+#272= IFCPROPERTYSINGLEVALUE('Category',$,IFCLABEL('Structural Stiffeners'),$);
+#273= IFCPROPERTYSET('2Dm85vmo90RAsCPQsUcS5n',#42,'Pset_ProductRequirements',$,(#272));
+#275= IFCPROPERTYSET('0PQUxac7f1OelFDsrVvB4j',#42,'Pset_QuantityTakeOff',$,(#230));
+#277= IFCRELDEFINESBYPROPERTIES('0$40e$b4fCeRd8e7mR1Gzb',#42,$,$,(#267),#270);
+#281= IFCRELDEFINESBYPROPERTIES('2gYao1hhjFERdLyVD0iIuR',#42,$,$,(#267),#273);
+#284= IFCRELDEFINESBYPROPERTIES('14UjrX$2n3Jh6rViNPsOY$',#42,$,$,(#267),#275);
+#287= IFCMAPPEDITEM(#192,#203);
+#288= IFCSHAPEREPRESENTATION(#125,'Body','MappedRepresentation',(#287));
+#290= IFCPRODUCTDEFINITIONSHAPE($,$,(#288));
+#293= IFCCARTESIANPOINT((0.,4.,0.));
+#295= IFCAXIS2PLACEMENT3D(#293,$,$);
+#296= IFCLOCALPLACEMENT(#146,#295);
+#297= IFCPLATE('1oHE7S_K14efhlXcfQSE1b',#42,'Structural Stiffeners Family:Structural Stiffeners Family:154167',$,'Structural Stiffeners Family:Structural Stiffeners Family',#296,#290,'154167');
+#300= IFCPROPERTYSET('1oHE7S_K14efhlZPrQSE1b',#42,'Pset_PlateCommon',$,(#230,#231));
+#302= IFCPROPERTYSINGLEVALUE('Category',$,IFCLABEL('Structural Stiffeners'),$);
+#303= IFCPROPERTYSET('0U4jwfnK92p92a$EGfj2Xr',#42,'Pset_ProductRequirements',$,(#302));
+#305= IFCPROPERTYSET('2t8AvUsbf1KOAW5Zxirtq$',#42,'Pset_QuantityTakeOff',$,(#230));
+#307= IFCRELDEFINESBYPROPERTIES('198TjYEaH2VRnVuUP6k5cB',#42,$,$,(#297),#300);
+#311= IFCRELDEFINESBYPROPERTIES('1ZH1rzGDf7vxGdHTCxV1zR',#42,$,$,(#297),#303);
+#314= IFCRELDEFINESBYPROPERTIES('0E2HyfUjH2VQR4h7YIOXap',#42,$,$,(#297),#305);
+#318= IFCPROPERTYSINGLEVALUE('Name',$,IFCLABEL('Level 1'),$);
+#319= IFCPROPERTYSET('0yrXmO8gTDsflyPwU51m_l',#42,'Pset_AirSideSystemInformation',$,(#318));
+#321= IFCPROPERTYSINGLEVALUE('AboveGround',$,IFCLOGICAL(.U.),$);
+#322= IFCPROPERTYSET('2MayaW1Gv4GviuBtqfLNUo',#42,'Pset_BuildingStoreyCommon',$,(#321));
+#324= IFCPROPERTYSINGLEVALUE('Name',$,IFCLABEL('Level 1'),$);
+#325= IFCPROPERTYSINGLEVALUE('Category',$,IFCLABEL('Levels'),$);
+#326= IFCPROPERTYSET('26w21SRU15duVqd1fkSgmW',#42,'Pset_ProductRequirements',$,(#324,#325));
+#328= IFCRELDEFINESBYPROPERTIES('1eXsjYeSf7of_7KP5NxVYd',#42,$,$,(#148),#319);
+#332= IFCRELDEFINESBYPROPERTIES('0BZ3RxRsnDMOYXmWnA_mHR',#42,$,$,(#148),#322);
+#335= IFCRELDEFINESBYPROPERTIES('1GTimDMCD1a8ka$JotSSYA',#42,$,$,(#148),#326);
+#338= IFCRELCONTAINEDINSPATIALSTRUCTURE('2MayaW1Gv4Gviu990fLNUo',#42,$,$,(#215,#267,#297),#148);
+#344= IFCRELAGGREGATES('13MwepTV58WAqvBhSpD32Y',#42,$,$,#128,(#152));
+#348= IFCRELAGGREGATES('1xIIMoA3fFIA2EiiJCyZjZ',#42,$,$,#152,(#139));
+#352= IFCRELAGGREGATES('1b7tIashzEUx2OKPg24_7R',#42,$,$,#139,(#148));
+#356= IFCPROPERTYSINGLEVALUE('NumberOfStoreys',$,IFCINTEGER(1),$);
+#357= IFCPROPERTYSINGLEVALUE('IsLandmarked',$,IFCLOGICAL(.U.),$);
+#358= IFCPROPERTYSET('1b7tIashzEUx2OMdA24_7R',#42,'Pset_BuildingCommon',$,(#356,#357));
+#360= IFCPROPERTYSINGLEVALUE('Category',$,IFCLABEL('Project Information'),$);
+#361= IFCPROPERTYSET('2PIUl3dR97APzhGPWcNW3w',#42,'Pset_ProductRequirements',$,(#360));
+#363= IFCRELDEFINESBYPROPERTIES('0XBLkfQYj59vwMh3BoPWYr',#42,$,$,(#139),#358);
+#367= IFCRELDEFINESBYPROPERTIES('3QjH5PuJz2rxytNuS_mxKm',#42,$,$,(#139),#361);
+#370= IFCRELASSOCIATESMATERIAL('3ueP_HxePEP8HLWRh4$yAM',#42,$,$,(#195,#215,#267,#297),#198);
+#379= IFCPRESENTATIONLAYERASSIGNMENT('S-BEAM',$,(#184,#206,#258,#288),$);
 ENDSEC;
 
 END-ISO-10303-21;
