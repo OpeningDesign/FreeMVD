@@ -1,7 +1,7 @@
 ISO-10303-21;
 HEADER;
 FILE_DESCRIPTION(('ViewDefinition[DesignTransferView]'),'2;1');
-FILE_NAME('IfcAnnotation_Text_Smart_02.ifc','2022-04-17T19:21:57-05:00',(),(),'IfcOpenShell v0.7.0-2985bba1','BlenderBIM 0.0.220416','Nobody');
+FILE_NAME('Annotation_Text_Smart_02.ifc','2022-07-07T13:49:19-05:00',(),(),'IfcOpenShell v0.7.0-cb8cfd79','BlenderBIM 0.0.220707','Nobody');
 FILE_SCHEMA(('IFC4'));
 ENDSEC;
 DATA;
