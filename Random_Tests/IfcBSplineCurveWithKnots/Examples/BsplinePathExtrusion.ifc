@@ -50,7 +50,7 @@ DATA;
             #46=IFCARBITRARYCLOSEDPROFILEDEF(.AREA.,$,#47);
                 /*#47=IFCINDEXEDPOLYCURVE(#48,(IFCARCINDEX((1,2,3)),IFCARCINDEX((3,4,1))),.F.);
                     #48=IFCCARTESIANPOINTLIST2D(((-0.1,0.),(0.,0.1),(0.1,0.),(0.,-0.1)));*/
-                #47= IFCCIRCLE(#25000,0.6);
+                #47= IFCCIRCLE(#25000,0.1);
                     #25000= IFCAXIS2PLACEMENT2D(#24800,#2800);
                         #24800= IFCCARTESIANPOINT((0.,0.));
                         #2800= IFCDIRECTION((0.,1.));
@@ -58,8 +58,8 @@ DATA;
                 #63=IFCCARTESIANPOINT((0.,0.,0.));
                 #75=IFCDIRECTION((1.,0.,0.));
                 #76=IFCDIRECTION((0.,0.,1.));
-            #45=IFCINDEXEDPOLYCURVE(#4800,(IFCLINEINDEX((1,2)),IFCARCINDEX((2,3,4))),.F.);
-                    #4800=IFCCARTESIANPOINTLIST2D(((0.,0.),(0.,10.),(2.,15.),(5.,10.)));
+            /*#45=IFCINDEXEDPOLYCURVE(#4800,(IFCLINEINDEX((1,2)),IFCARCINDEX((2,3,4))),.F.);
+                    #4800=IFCCARTESIANPOINTLIST2D(((0.,0.),(0.,10.),(2.,15.),(5.,10.)));*/
             /*#45= IFCCIRCLE(#25000,1.);
                 #25000= IFCAXIS2PLACEMENT2D(#24800,#2800);
                     #24800= IFCCARTESIANPOINT((0.,0.));
@@ -67,7 +67,7 @@ DATA;
             /*#45=IFCBSPLINECURVEWITHKNOTS(1,(#4071,#4084),.UNSPECIFIED.,.F.,.U.,(2,2),(0.,1.),.UNSPECIFIED.);
                 #4071=IFCCARTESIANPOINT((0.,0.,0.));
                 #4084=IFCCARTESIANPOINT((0.,0.,10.));*/
-            /*#45=IFCBSPLINECURVEWITHKNOTS(3,(#64,#65,#66,#67,#68,#69,#70,#71), .UNSPECIFIED.,.F.,.U.,(4,1,1,1,1,4),(0.,0.1,0.2,0.3,0.4,0.5),.UNSPECIFIED.);
+            #45=IFCBSPLINECURVEWITHKNOTS(3,(#64,#65,#66,#67,#68,#69,#70,#71), .UNSPECIFIED.,.F.,.U.,(4,1,1,1,1,4),(0.,0.1,0.2,0.3,0.4,0.5),.UNSPECIFIED.);
                 #64=IFCCARTESIANPOINT((0.,0.,0.));
                 #65=IFCCARTESIANPOINT((1.,0.,0.));
                 #66=IFCCARTESIANPOINT((2.,0.,2.));
@@ -75,7 +75,7 @@ DATA;
                 #68=IFCCARTESIANPOINT((4.,0.,4.));
                 #69=IFCCARTESIANPOINT((5.,0.,5.));
                 #70=IFCCARTESIANPOINT((6.,0.,6.));
-                #71=IFCCARTESIANPOINT((7.,0.,7.));*/
+                #71=IFCCARTESIANPOINT((7.,0.,7.));
             #44=IFCPLANE(#57);
                 #57=IFCAXIS2PLACEMENT3D(#72,#77,#78);
                     #72=IFCCARTESIANPOINT((0.,0.,0.));
