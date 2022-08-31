@@ -8,6 +8,14 @@ The evolving documentation lives in [here](./IFC_roundtrip_specifications.md).
 
 ---
 
+
+
+The IFC files with the suffix `_commented` were created with [IFC-Commenter](https://github.com/OpeningDesign/ifc-commenter).
+
+
+
+
+
 #### License
 
 [Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/). 
